@@ -1,0 +1,20 @@
+<odoo>
+  <data>
+    <!-- Top menu item -->
+
+    <menuitem name="Validations" id="validations.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Students" id="validations.menu_students" parent="validations.menu_root"/>
+    <menuitem name="Modules" id="validations.menu_modules" parent="validations.menu_root"/>
+    <menuitem name="course" id="validations.menu_course" parent="validations.menu_root"/>
+    <menuitem name="Validation" id="validations.menu_validation" parent="validations.menu_root"/>
+
+    <!-- actions -->
+    <menuitem name="Students" id="validations.menu_students_list" parent="validations.menu_students" action="validations.action_window_students"/>
+    <menuitem name="Modules" id="validations.menu_modules_list" parent="validations.menu_modules" action="validations.action_window_modules"/>
+    <menuitem name="course" id="validations.menu_course_list" parent="validations.menu_course" action="validations.action_window_course"/>
+    <menuitem name="Validation" id="validations.menu_validation_list" parent="validations.menu_validation" action="validations.action_window_validation"/>
+  </data>
+</odoo>

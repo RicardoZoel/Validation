@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="validations.course_model_form">
+      <field name="name">course Form</field>
+      <field name="model">validations.course_model</field>
+      <field name="arch" type="xml">
+        <form strong="Category">
+          <group>
+            <field name="name"/>
+            <field name="description"/>
+            <field name="modules"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="validations.course_model_list">
+      <field name="name">course list</field>
+      <field name="model">validations.course_model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="description"/>
+          <field name="modules"/>
+        </tree>
+      </field>
+    </record>
+
+    
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="validations.action_window_course">
+      <field name="name">course Window</field>
+      <field name="res_model">validations.course_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="task_app.action_server">
+      <field name="name">task_app server</field>
+      <field name="model_id" ref="model_task_app_task_app"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+    <!-- menu categories -->
+
+
+    <!-- actions -->
+  </data>
+</odoo>
